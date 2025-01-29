@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tienda.css">
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
 </head>
 
 <body>
     <header>
         <div class="headerContainer">
             <div class="logo">
-                <img src="./img/logo.png" alt="Logo" height="80%" />
+                <img src="../img/logo.png" alt="Logo" height="80%" />
             </div>
             <nav class="navBar">
-                <a href="#home">HOME</a>
+                <a href="../index.html">HOME</a>
                 <a href="#shop">TIENDA</a>
-                <a href="#catalogue">CATALOGO</a>                
+                <a href="../php/catalogo.php">CATALOGO</a>                
             </nav>
         </div>
     </header>
 
     <section class="shop" id="shop">
         <div class="products-container">
-
             <!-- 1 -->
             <div class="product-details">
                 <div class="image-container">

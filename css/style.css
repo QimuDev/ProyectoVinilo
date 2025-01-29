@@ -341,11 +341,7 @@ h1 {
 
 .botonDesplegable {
   padding: 0.6rem 0.83rem;
-<<<<<<< HEAD
-  border: solid 3px rgb(63, 42, 25);
-=======
   border: solid 3px #3f2a19;
->>>>>>> 48576d2287a17f0cce3dc9f2d87dcc62e2f96773
   border-radius: 25rem;
   background-color: transparent;
   color: black;
@@ -369,11 +365,7 @@ h1 {
   position: fixed;
   top: 10%;
   right: -21%;
-<<<<<<< HEAD
-  background-color: rgb(63, 42, 25);
-=======
   background-color: #3f2a19;
->>>>>>> 48576d2287a17f0cce3dc9f2d87dcc62e2f96773
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   transition: right 0.5s ease;
