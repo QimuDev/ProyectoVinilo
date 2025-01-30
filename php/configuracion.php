@@ -2,7 +2,7 @@
 $servername = getenv("MYSQLHOST");
 $username = getenv("MYSQLUSER");
 $password = getenv("MYSQLPASSWORD");
-$dbname = getenv("MYSQLDATABASE"):
+$dbname = getenv("MYSQLDATABASE");
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
