@@ -1,18 +1,15 @@
 <?php
-
 include_once("configuracion.php");
 
-$sql = "
-    SELECT 
-        v.imagenVinilo, 
-        v.idVinilo, 
-        v.tituloVinilo, 
-        b.nombreBanda,  
-        v.precioVinilo, 
-        v.visible 
-    FROM vinilos v
-    JOIN banda b ON v.idBanda = b.idBanda
-";
+$busqueda = isset($_GET['q']) ? $conn->real_escape_string($_GET['q']) : '';
+
+$sql = "SELECT v.imagenVinilo, v.idVinilo, v.tituloVinilo, b.nombreBanda, v.precioVinilo, v.visible
+        FROM vinilos v
+        JOIN banda b ON v.idBanda = b.idBanda";
+
+if (!empty($busqueda)) {
+    $sql .= " WHERE v.tituloVinilo LIKE '%$busqueda%' OR b.nombreBanda LIKE '%$busqueda%'";
+}
 
 $result = $conn->query($sql);
 
@@ -28,28 +25,28 @@ if ($result->num_rows > 0) {
             if ($key === 'imagenVinilo') {
                 $tabla .= "<td><div class='vinylImage' style='background-image: url(" . htmlspecialchars($value) . ");'></div></td>";
                 $tabla .= "<div class='bodyRow'>";
-
             } elseif ($key === 'idVinilo') {
                 $tabla .= "<td style='display: none;'>" . htmlspecialchars($value) . "</td>";
-
             } elseif ($key === 'visible') {
                 if ($value === 'True') {
                     $tabla .= "<td><a href='ocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'><div class='visibleImg'></div></a></td>";
                 } else {
                     $tabla .= "<td><a href='desocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'><div class='invisibleImg'></div></a></td>";
                 }
-
             } elseif ($key === 'precioVinilo') {
                 $tabla .= "<td>" . htmlspecialchars($value) . " €</td>";
-                
             } else {
                 $tabla .= "<td>" . htmlspecialchars($value) . "</td>";
             }
         }
+
         $tabla .= "</tr>";
     }
-    $tabla .= "</table>";
-}
-echo $tabla;
 
+    $tabla .= "</table>";
+} else {
+    $tabla = "<p>No se encontraron resultados.</p>";
+}
+
+echo $tabla;
 ?>
