@@ -24,7 +24,7 @@ body {
 
 .buscadorContainer {
   height: 20vh;
-  width: 70vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,27 @@ body {
   padding: 0.8rem;
   border: 2px solid black;
   border-radius: 2rem;
+}
+
+.exit{
+  width: 30%;
+  display: flex;
+  justify-content: end;
+}
+
+.exit a{
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  color: black; 
+  padding: 7px 14px;
+  border-radius:2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.exit a:hover{
+  background-color: rgb(63, 42, 25);
+  color:bisque;
 }
 
 .tableContainer {
@@ -70,7 +91,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius:0.7rem;
   width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.rowContainer:hover{
+  background-color: rgb(255, 255, 238);
 }
 
 .vinylImage {

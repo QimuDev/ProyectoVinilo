@@ -2,12 +2,33 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Eliminar la barra de desplazamiento */
 body {
-  margin: 0 auto;
-  font-family: "Prata", "Serif";
+  margin: 0;
+  font-family: "Poppins", "Serif";
   background-color: bisque;
   overflow-x: hidden;
+  overflow-y: auto;  /* Permite el scroll solo cuando sea necesario */
 }
+
+/* Estilo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;  /* Ancho de la barra de desplazamiento */
+  height: 8px; /* Alto de la barra de desplazamiento */
+  border-radius: 50px; /* Borde redondeado de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3f2a19;  /* Color del thumb (parte móvil) */
+  border-radius: 50px;  /* Borde redondeado del thumb */
+  border: 2px solid #fff; /* Opcional: Añadir un borde blanco alrededor del thumb */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 50px;  /* Borde redondeado del track */
+}
+
+
 
 /* Header */
 .headerContainer {
@@ -18,7 +39,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: bisque;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom:2px solid black;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,7 +60,9 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-left:1.5rem;
+  margin-right:1.5rem;
   align-items: center;
   gap: 20px;
 }
@@ -48,7 +71,7 @@ nav a {
   text-decoration: none;
   color: rgb(63, 42, 25);
   font-weight: bold;
-  font-family: "Noto Serif Malayalam", serif;
+  font-family: "Poppins", serif;
   padding: 5px 10px;
   border-radius: 5px;
   transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s;
@@ -160,7 +183,7 @@ h1 {
   height: 75vh;
   width: 100%;
   color: white;
-  background-image: url("./img/fondoHistoria.png");
+  background-image: url("../img/fondoHistoria.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -243,6 +266,7 @@ h1 {
 /* Footer */
 .footer-container {
   height: 20vh;
+  width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -276,6 +300,7 @@ h1 {
 
 .author-rights {
   height: 5vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   background-color: #232323;
@@ -341,16 +366,12 @@ h1 {
 
 .botonDesplegable {
   padding: 0.6rem 0.83rem;
-<<<<<<< HEAD
   border: solid 3px rgb(63, 42, 25);
-=======
-  border: solid 3px #3f2a19;
->>>>>>> 48576d2287a17f0cce3dc9f2d87dcc62e2f96773
   border-radius: 25rem;
   background-color: transparent;
   color: black;
   font-size: 17px;
-  font-family: "Prata", "Serif";
+  font-family: "Poppins", "Serif";
   cursor: pointer;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -369,11 +390,7 @@ h1 {
   position: fixed;
   top: 10%;
   right: -21%;
-<<<<<<< HEAD
   background-color: rgb(63, 42, 25);
-=======
-  background-color: #3f2a19;
->>>>>>> 48576d2287a17f0cce3dc9f2d87dcc62e2f96773
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   transition: right 0.5s ease;
@@ -387,7 +404,7 @@ h1 {
   padding: 0.6rem 0.83rem;
   color: bisque;
   text-decoration: none;
-  font-family: "Prata", "Serif";
+  font-family: "Poppins", "Serif";
   margin-left: 2rem;
   border: solid 2px bisque;
   border-radius: 10rem;
@@ -414,7 +431,7 @@ h1 {
   padding: 0.6rem 0.83rem;
   color: bisque;
   text-decoration: none;
-  font-family: "Prata", "Serif";
+  font-family: "Poppins", "Serif";
   border: solid 2px bisque;
   border-radius: 10rem;
   background-color: rgb(63, 42, 25);
@@ -429,7 +446,7 @@ h1 {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: bisque;
-  font-family: "Prata", "Serif";
+  font-family: "Poppins", "Serif";
   text-align: justify;
   padding: 0.5rem 1rem;
   background-color: rgb(63, 42, 25);
@@ -445,10 +462,6 @@ h1 {
   align-items: center;
   color: white;
   background-color: #333333;
-<<<<<<< HEAD
-  margin: 2rem 0;
-=======
->>>>>>> 48576d2287a17f0cce3dc9f2d87dcc62e2f96773
   overflow: hidden;
   position: relative;
 }

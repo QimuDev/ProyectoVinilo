@@ -37,8 +37,11 @@ if ($result2->num_rows > 0) {
 <body>
     <div class="catalogoContainer">
         <div class="buscadorContainer">
+            <div class="exit"></div>
             <input type="text" class="buscador" name="buscador" id="buscador" placeholder="Busca tu vinilo">
+            <div class="exit"><a href="../php/tienda.php">EXIT</a></div>
         </div>
+        
      
 
         <div class="tableContainer">
