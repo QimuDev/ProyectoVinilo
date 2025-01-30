@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vinylPrice = $_POST["vinylPrice"];
     $vinylStatus = "True";
 
-    
     $uploadDir = "../img/";
 
     $imageName = basename($_FILES["vinylImage"]["name"]);

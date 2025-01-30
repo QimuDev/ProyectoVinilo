@@ -19,7 +19,7 @@
             <nav class="navBar">
                 <a href="#home">HOME</a>
                 <a href="#shop">TIENDA</a>
-                <a href="#catalogue">CATALOGO</a>                
+                <a href="#catalogue">CATALOGO</a>
             </nav>
         </div>
     </header>
