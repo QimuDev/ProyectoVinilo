@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2025 a las 17:54:46
+-- Tiempo de generación: 06-02-2025 a las 09:03:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -95,7 +95,10 @@ INSERT INTO `vinilos` (`idVinilo`, `tituloVinilo`, `descripcionVinilo`, `precioV
 (5, 'True', 'True (1983) es el álbum más emblemático de Spandau Ballet, mezclando pop y soul elegante. Destaca por el éxito mundial \"True\" y temas como \"Gold\", redefiniendo el sonido romántico de los 80.', 199.95, '../img/True.png', 'True', 5),
 (7, 'Parade', 'Parade (1984) es el cuarto álbum de Spandau Ballet, con un sonido más maduro y experimental. Incluye éxitos como \"Only When You Leave\" y \"I Know This Much Is True\", fusionando pop, new wave y sofistic', 129.95, '../img/imgParade.png', 'True', 5),
 (8, 'Use Your Illusion', ' Use Your Illusion I (1991) de Guns N\' Roses es un álbum doble que incluye éxitos como \"November Rain\", \"Don\'t Cry\" y \"Live and Let Die\". Es una mezcla épica de rock y baladas.', 105.95, '../img/useYourIllusion.jpg', 'True', 2),
-(9, 'The Dreaming', 'The Dreaming (1982) de Kate Bush es un álbum experimental y teatral, lleno de sonidos innovadores, letras narrativas y emotivas. Explora temas oscuros y mágicos con su inigualable creatividad.', 49.95, '../img/theDreaming.jpg', 'True', 6);
+(9, 'The Dreaming', 'The Dreaming (1982) de Kate Bush es un álbum experimental y teatral, lleno de sonidos innovadores, letras narrativas y emotivas. Explora temas oscuros y mágicos con su inigualable creatividad.', 49.95, '../img/theDreaming.jpg', 'True', 6),
+(10, 'Hounds of Love', 'Hounds of Love (1985) de Kate Bush es un álbum icónico que mezcla arte pop y experimentación. Destacan \"Running Up That Hill\" y \"Cloudbusting\". Su sonido etéreo y narrativo lo hace inolvidable.', 89.95, '../img/houndsOfLove.png', 'True', 6),
+(11, 'A Night at the Opera', 'A Night at the Opera (1975) es un álbum legendario de Queen con arreglos épicos y géneros variados. Incluye \"Bohemian Rhapsody\", una obra maestra del rock, y la energética \"You\'re My Best Friend\". ', 139.95, '../img/aNightAtTheOpera.jpg', 'True', 1),
+(12, 'Ray of Light', 'Ray of Light (1998) es un álbum innovador con un sonido electrónico y temas como \"Frozen\" y \"Ray of Light\". También Madonna (1983), su debut con éxitos como \"Holiday\" y \"Borderline\".', 23.95, '../img/rayOfLight.jpg', 'True', 4);
 
 --
 -- Índices para tablas volcadas
@@ -141,7 +144,7 @@ ALTER TABLE `generos`
 -- AUTO_INCREMENT de la tabla `vinilos`
 --
 ALTER TABLE `vinilos`
-  MODIFY `idVinilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idVinilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
